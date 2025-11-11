@@ -57,8 +57,8 @@ We believe great engineering comes from great teams having great conversations:
 
 <div align="center">
 
-![Adaptive GitHub Stats](https://github-readme-stats.vercel.app/api?username=AdaptiveUK&show_icons=true&theme=default)
-![Adaptive Contributions](https://github-readme-stats.vercel.app/api?username=AdaptiveUK&show_icons=true&theme=default)
+![Adaptive Web GitHub Stats](https://github-readme-stats.vercel.app/api?username=adaptive-web&show_icons=true&theme=default)
+![Adaptive Web Contributions](https://github-readme-stats.vercel.app/api?username=adaptive-web&show_icons=true&theme=default)
 
 *We contribute to the open source ecosystem and share our learnings*
 
