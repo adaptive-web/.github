@@ -25,10 +25,8 @@
 - **DevOps Engineering** - CI/CD pipelines that actually work and make sense  
 - **Observability & Monitoring** - Because knowing is half the battle
 - **DevSecOps Integration** - Security built-in, not bolted-on
-- **Cloud Infrastructure** - AWS and beyond
-- **Team Enablement** - We don't just build systems, we build happy teams
+- **Cloud Infrastructure** - AWS, Pantheon, and beyond
 - **Drush & Drupal Console** - All the command-line magic
-- **Performance Optimization** - Speed matters, and we care about it
 
 <!-- ⭐ FEATURED PROJECTS -->
 ## ⭐ Featured Projects
