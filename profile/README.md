@@ -16,12 +16,7 @@
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![Pantheon](https://img.shields.io/badge/Pantheon-FF6825?style=for-the-badge&logo=pantheon&logoColor=white)
 ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![NixOS](https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=nixos&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 
 <!-- 🚀 WHAT WE DO -->
 ## 🚀 What We Do
@@ -30,7 +25,7 @@
 - **DevOps Engineering** - CI/CD pipelines that actually work and make sense  
 - **Observability & Monitoring** - Because knowing is half the battle
 - **DevSecOps Integration** - Security built-in, not bolted-on
-- **Cloud Infrastructure** - AWS, Cloudflare, and beyond
+- **Cloud Infrastructure** - AWS and beyond
 - **Team Enablement** - We don't just build systems, we build happy teams
 - **Drush & Drupal Console** - All the command-line magic
 - **Performance Optimization** - Speed matters, and we care about it
@@ -43,7 +38,6 @@
 | [adaptive-phoenix](https://github.com/AdaptiveUK/adaptive-phoenix) | Our flagship Drupal site with modern tooling | ![CI](https://github.com/AdaptiveUK/adaptive-phoenix/workflows/CI/badge.svg) |
 | [devops-scripts](https://github.com/AdaptiveUK/devops-scripts) | Reusable DevOps automation and utilities | 🔄 Active |
 | [nightwatch-demo](https://github.com/AdaptiveUK/nightwatch-demo) | End-to-end testing with Nightwatch.js | 🧪 Testing |
-| [terraform-modules](https://github.com/AdaptiveUK/terraform-modules) | Our IaC building blocks | 🏗️ Infrastructure |
 | [vibeops-tools](https://github.com/AdaptiveUK/vibeops-tools) | Tools that make DevOps fun | 🎵 VibeOps |
 
 <!-- 🎵 CULTURE & TEAM VIBE -->
