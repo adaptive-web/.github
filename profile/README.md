@@ -33,7 +33,7 @@
 
 | Repository | Description | Status |
 |------------|-------------|--------|
-| [adaptive-phoenix](https://github.com/AdaptiveUK/adaptive-phoenix) | Our flagship Drupal site with modern tooling | ![CI](https://github.com/AdaptiveUK/adaptive-phoenix/workflows/CI/badge.svg) |
+| [adaptive-phoenix](https://github.com/AdaptiveUK/adaptive-phoenix) | Our flagship Drupal site with modern tooling | 🔥 Active |
 | [devops-scripts](https://github.com/AdaptiveUK/devops-scripts) | Reusable DevOps automation and utilities | 🔄 Active |
 | [nightwatch-demo](https://github.com/AdaptiveUK/nightwatch-demo) | End-to-end testing with Nightwatch.js | 🧪 Testing |
 | [vibeops-tools](https://github.com/AdaptiveUK/vibeops-tools) | Tools that make DevOps fun | 🎵 VibeOps |
