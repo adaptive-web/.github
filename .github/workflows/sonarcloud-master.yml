@@ -1,0 +1,48 @@
+name: SonarQube Master Analysis
+
+# This workflow ensures SonarQube analysis runs on master branch pushes
+# Self-hosted SonarQube instance at http://sonar.devpad.co.uk/
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:  # Allow manual triggering for testing
+
+jobs:
+  sonarqube-analysis:
+    name: SonarQube Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for better analysis
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@53bf16784717a43dc19b99af8195df08d9a18f76
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@40f5b61913e891f9d316696628698051136015be
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}

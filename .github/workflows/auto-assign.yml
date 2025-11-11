@@ -1,0 +1,12 @@
+name: Auto-assign new issues
+on:
+  issues:
+    types: [opened]
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: pozil/auto-assign-issue@v1
+        with:
+          assignees: |
+            adaptive-web/devops

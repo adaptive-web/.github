@@ -1,0 +1,148 @@
+version: 2
+updates:
+  # Composer dependencies for the main Drupal project
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 2
+    reviewers:
+      - "dependabot[bot]"
+    assignees:
+      - "dependabot[bot]"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "php"
+      - "drupal"
+    allow:
+      # Allow updates for Drupal core and stable modules
+      - dependency-type: "direct"
+    ignore:
+      # Ignore major version updates for stability in production
+      - dependency-name: "drupal/core"
+        update-types: ["version-update:semver-major"]
+      # Ignore pre-release versions
+      - dependency-name: "drupal/*"
+        update-types: ["version-update:semver-major"]
+      # Keep specific versions that are known to work
+      - dependency-name: "drupal/admin_toolbar"
+        versions: [">=4.0.0"]
+      - dependency-name: "drupal/commerce"
+        versions: [">=3.0.0"]
+    groups:
+      drupal-core:
+        patterns:
+          - "drupal/core*"
+        dependency-type: "direct"
+      drupal-stable-modules:
+        patterns:
+          - "drupal/address"
+          - "drupal/admin_toolbar"
+          - "drupal/auto_entitylabel"
+          - "drupal/block_class"
+          - "drupal/bootstrap4"
+          - "drupal/commerce*"
+          - "drupal/config_split"
+          - "drupal/entity"
+          - "drupal/field_group"
+          - "drupal/gin"
+          - "drupal/metatag"
+          - "drupal/paragraphs"
+          - "drupal/pathauto"
+          - "drupal/redirect"
+          - "drupal/search_api"
+          - "drupal/token"
+          - "drupal/views_bulk_operations"
+          - "drupal/webform"
+        dependency-type: "direct"
+      drupal-beta-modules:
+        patterns:
+          - "drupal/*"
+        update-types: ["version-update:semver-patch", "version-update:semver-minor"]
+      composer-tools:
+        patterns:
+          - "composer/*"
+          - "cweagans/*"
+          - "mglaman/*"
+          - "drush/drush"
+      frontend-libraries:
+        patterns:
+          - "twbs/*"
+          - "harvesthq/*"
+          - "jquery/*"
+          - "enyo/*"
+          - "jjj/*"
+
+  # npm dependencies for the main theme
+  - package-ecosystem: "npm"
+    directory: "/web/themes/custom/awbs4"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "09:00"
+    open-pull-requests-limit: 2
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "frontend"
+    allow:
+      - dependency-type: "direct"
+    groups:
+      bootstrap-dependencies:
+        patterns:
+          - "bootstrap*"
+          - "@popperjs/*"
+
+  # npm dependencies for adaptiveparagraphs module
+  - package-ecosystem: "npm"
+    directory: "/web/modules/custom/paragraph_project/adaptiveparagraphs"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "10:00"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "module"
+
+  # npm dependencies for adaptive_paragraphmenu module
+  - package-ecosystem: "npm"
+    directory: "/web/modules/custom/adaptive_paragraphmenu"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "11:00"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "javascript"
+      - "module"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
+      - "ci"

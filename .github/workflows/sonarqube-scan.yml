@@ -1,0 +1,22 @@
+name: SonarQube Scan (DISABLED - Using SonarCloud App Instead)
+
+# This workflow is disabled - using SonarCloud GitHub App instead for faster analysis
+# File kept for reference only - will not run due to no valid triggers
+on:
+  # Empty triggers section prevents workflow from running
+  workflow_dispatch:
+    inputs:
+      dummy:
+        description: 'This workflow is disabled'
+        required: false
+        default: 'disabled'
+
+jobs:
+  # Dummy job to make workflow valid but will never run
+  disabled:
+    name: Workflow Disabled
+    runs-on: ubuntu-latest
+    if: false  # This condition prevents the job from ever running
+    steps:
+      - name: Skip
+        run: echo "This workflow is disabled - using SonarCloud App instead"

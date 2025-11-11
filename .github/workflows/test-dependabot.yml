@@ -1,0 +1,62 @@
+name: Test Dependabot Configuration
+on:
+  workflow_dispatch:
+    inputs:
+      test_type:
+        description: 'Type of test to run'
+        required: true
+        default: 'dry-run'
+        type: choice
+        options:
+          - dry-run
+          - security-check
+          - composer-check
+
+jobs:
+  test-dependabot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+        
+      - name: Cache Composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+            
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress
+        
+      - name: Check for outdated packages (dry run)
+        if: github.event.inputs.test_type == 'dry-run'
+        run: |
+          echo "🔍 Checking for outdated packages..."
+          composer outdated --direct
+          
+      - name: Run security check
+        if: github.event.inputs.test_type == 'security-check'
+        run: |
+          echo "🔒 Running security check..."
+          if command -v drush &> /dev/null; then
+            drush security:check || echo "No Drush security check available"
+          fi
+          composer audit
+          
+      - name: Validate composer.json
+        if: github.event.inputs.test_type == 'composer-check'
+        run: |
+          echo "📦 Validating composer configuration..."
+          composer validate --strict
+          composer show --tree --direct

@@ -1,0 +1,16 @@
+name: Mark inactive issues
+on:
+  schedule:
+    - cron: "0 2 * * 0" # runs weekly
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-stale: 90
+          days-before-close: 14
+          stale-issue-message: "👋 This issue has been inactive for 90 days. Please comment to keep it open."
+          exempt-issue-labels: "pinned,security,do-not-close"
+          close-issue-message: "Closing due to inactivity. Reopen if still relevant."
