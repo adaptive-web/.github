@@ -59,7 +59,7 @@ We believe great engineering comes from great teams having great conversations:
 
 *We contribute to the open source ecosystem and share our learnings*
 
-**50+ repositories** across Drupal, DevOps, and client projects
+**30+ repositories** across Drupal, DevOps, and client projects
 
 </div>
 
