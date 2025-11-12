@@ -70,7 +70,6 @@ Interested in working with us or contributing to our projects?
 
 - **🌐 Website**: [adaptive.co.uk](https://adaptive.co.uk)
 - **💼 Services**: Drupal development, DevOps consulting, team enablement
-- **🤝 Partnerships**: We love collaborating with other agencies and teams
 - **💡 Questions**: Open an issue or start a discussion!
 
 <!-- 📝 FOOTER -->
