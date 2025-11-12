@@ -33,11 +33,11 @@
 
 | Repository | Description | Status |
 |------------|-------------|--------|
-| [adaptive-phoenix](https://github.com/AdaptiveUK/adaptive-phoenix) | Our flagship Drupal site with modern tooling | 🔥 Active |
-| [New-Deployment-Scripts](https://github.com/AdaptiveUK/New-Deployment-Scripts) | Our deployment automation scripts | 🚀 Deploy |
-| [new-dots](https://github.com/AdaptiveUK/new-dots) | Shared developer scripts and utilities | 🛠️ DevTools |
-| [ko-quicksilver-test](https://github.com/AdaptiveUK/ko-quicksilver-test) | Pantheon Quicksilver scripting demos | ⚡ Pantheon |
-| [nightwatch-demo](https://github.com/AdaptiveUK/nightwatch-demo) | End-to-end testing with Nightwatch.js | 🧪 Testing |
+| [adaptive-phoenix](https://github.com/adaptive-web/adaptive-phoenix) | Our flagship Drupal site with modern tooling | 🔥 Active |
+| [New-Deployment-Scripts](https://github.com/adaptive-web/New-Deployment-Scripts) | Our deployment automation scripts | 🚀 Deploy |
+| [new-dots](https://github.com/adaptive-web/new-dots) | Shared developer scripts and utilities | 🛠️ DevTools |
+| [ko-quicksilver-test](https://github.com/adaptive-web/ko-quicksilver-test) | Pantheon Quicksilver scripting demos | ⚡ Pantheon |
+| [nightwatch-demo](https://github.com/adaptive-web/nightwatch-demo) | End-to-end testing with Nightwatch.js | 🧪 Testing |
 
 <!-- 🎵 CULTURE & TEAM VIBE -->
 ## 🎵 Culture & Team Vibe
