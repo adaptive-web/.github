@@ -52,16 +52,7 @@ We believe great engineering comes from great teams having great conversations:
 - **🤝 Supportive Culture** - We win together, debug together
 - **📊 Data-Driven Decisions** - Metrics tell stories, we listen
 
-<!-- 📊 ACTIVITY SECTION -->
-## 📊 Organization Activity
 
-<div align="center">
-
-*We contribute to the open source ecosystem and share our learnings*
-
-**30+ repositories** across Drupal, DevOps, and client projects
-
-</div>
 
 <!-- 🚀 GETTING STARTED -->
 ## 🚀 Getting Started
