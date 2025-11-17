@@ -1,28 +1,16 @@
-## 📦 Dependency Update
-
-{{ body }}
-
-### 🔄 Changes Summary
-- **Ecosystem**: {{ ecosystem }}
-- **Directory**: {{ directory }}
-- **Dependencies updated**: {{ dependenciesCount }}
-
-### 🧪 Testing Checklist
-- [ ] Drupal core functionality works correctly
-- [ ] Custom modules are functioning
-- [ ] Theme styling and assets load properly
-- [ ] No PHP errors in logs
-- [ ] Database updates applied successfully (if any)
-- [ ] Performance is not degraded
-
-### 🚀 Deployment Notes
-- [ ] Tested on development environment
-- [ ] Staging environment tested (if available)
-- [ ] Ready for production deployment
-
-### 🔍 Additional Notes
-Add any specific testing instructions or notes about this update.
-
+---
+name: Pull Request Template
+about: Choose the appropriate template for your pull request
+title: ""
+labels: []
+assignees: ""
 ---
 
-**Automated by Dependabot** 🤖
+## 📝 Pull Request Template
+
+Please choose the appropriate template for your pull request:
+
+- **For Dependabot updates**: Use the `dependabot.md` template
+- **For human-authored PRs**: Use the `developer.md` template
+
+You can select these templates from the "Choose a template" dropdown when creating your pull request.

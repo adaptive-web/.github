@@ -8,8 +8,6 @@ updates:
       day: "monday"
       time: "09:00"
     open-pull-requests-limit: 2
-    reviewers:
-      - "dependabot[bot]"
     assignees:
       - "dependabot[bot]"
     commit-message:
@@ -21,7 +19,7 @@ updates:
       - "drupal"
     allow:
       # Allow updates for Drupal core and stable modules
-      - dependency-type: "direct"
+      - dependency-type: "production"
     ignore:
       # Ignore major version updates for stability in production
       - dependency-name: "drupal/core"
@@ -38,7 +36,7 @@ updates:
       drupal-core:
         patterns:
           - "drupal/core*"
-        dependency-type: "direct"
+        dependency-type: "production"
       drupal-stable-modules:
         patterns:
           - "drupal/address"
@@ -59,17 +57,18 @@ updates:
           - "drupal/token"
           - "drupal/views_bulk_operations"
           - "drupal/webform"
-        dependency-type: "direct"
+        dependency-type: "production"
       drupal-beta-modules:
         patterns:
           - "drupal/*"
-        update-types: ["version-update:semver-patch", "version-update:semver-minor"]
+        update-types: ["minor", "patch"]
       composer-tools:
         patterns:
           - "composer/*"
           - "cweagans/*"
           - "mglaman/*"
           - "drush/drush"
+        dependency-type: "production"
       frontend-libraries:
         patterns:
           - "twbs/*"
@@ -77,6 +76,7 @@ updates:
           - "jquery/*"
           - "enyo/*"
           - "jjj/*"
+        dependency-type: "production"
 
   # npm dependencies for the main theme
   - package-ecosystem: "npm"
@@ -100,6 +100,7 @@ updates:
         patterns:
           - "bootstrap*"
           - "@popperjs/*"
+        dependency-type: "production"
 
   # npm dependencies for adaptiveparagraphs module
   - package-ecosystem: "npm"
