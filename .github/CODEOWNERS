@@ -1,6 +1,6 @@
 # DevOps team owns GitHub configuration and Pantheon deployment files
 # Note: DevOps team (@adaptive-web/devops) needs repository access for team assignment to work
 # Currently using individual admins until team access is granted
-#.github/ @MichaelFisher1997 @nerdykey
-#pantheon.yml @MichaelFisher1997 @nerdykey
-#pantheon.upstream.yml @MichaelFisher1997 @nerdykey
+# .github/ @MichaelFisher1997 @nerdykey
+# pantheon.yml @MichaelFisher1997 @nerdykey
+# pantheon.upstream.yml @MichaelFisher1997 @nerdykey
