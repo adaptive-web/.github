@@ -2,63 +2,68 @@
 
 ![Adaptive Logo](https://www.adaptive.co.uk/themes/custom/awbs4/assets/adaptive-drupal-specialists-logo-notrans.png)
 
-### UK-based Drupal specialists since 2009
-
-**We build, host, and maintain Drupal sites — and the DevOps to keep them running**
-
-[![Drupal](https://img.shields.io/badge/Drupal-0678BE?style=flat-square&logo=drupal&logoColor=white)](https://www.drupal.org)
-[![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)](https://www.php.net)
-[![Pantheon](https://img.shields.io/badge/Pantheon-FF6825?style=flat-square&logo=pantheon&logoColor=white)](https://pantheon.io)
-[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/features/actions)
+### Internal Tools & Resources
 
 </div>
 
 ---
 
-## What We Do
+## Quick Links
 
-**Drupal Development** — Full-lifecycle: strategy, builds, migrations, ongoing support. We work with organisations across healthcare, education, charity, and commercial sectors.
-
-**DevOps & Hosting** — CI/CD pipelines, automated deployments, security scanning, monitoring. Primarily Pantheon, with experience across AWS and self-hosted infrastructure.
-
-**Internal Tooling** — We build our own tools to manage 40+ client sites efficiently:
-- [**Sentrix**](https://github.com/adaptive-web/sentrix) — Drupal updates control centre: track Dependabot PRs, manage test plans, monitor security advisories
-- [**Bagoftrix**](https://github.com/adaptive-web/bagoftrix) — Jira activity feed and team workload tracking
-- [**New-Deployment-Scripts**](https://github.com/adaptive-web/New-Deployment-Scripts) — Automated deployment automation
+| Tool | Purpose |
+|------|---------|
+| [Sentrix](https://github.com/adaptive-web/sentrix) | Drupal updates dashboard — track Dependabot PRs, test plans, security advisories |
+| [Bagoftrix](https://github.com/adaptive-web/bagoftrix) | Jira activity feed and team workload tracking |
+| [adaptive-phoenix](https://github.com/adaptive-web/adaptive-phoenix) | Company website repo |
+| [New-Deployment-Scripts](https://github.com/adaptive-web/New-Deployment-Scripts) | Deployment automation |
 
 ---
 
-## Client Work
+## Key Processes
 
-We maintain long-term relationships with our clients. Some sites we've hosted and supported for years:
+### Drupal Updates
+1. Dependabot opens PRs for patch updates → auto-merge after CI passes
+2. Minor/major updates → manual review in Sentrix
+3. All updates go through dev → staging → production
+4. Run test plan before merging to production
 
-| Client | Sector |
-|--------|--------|
-| Mencap | Charity |
-| Ambitious about Autism | Education/Charity |
-| Lymphoma Action | Healthcare/Charity |
-| Independent Age | Charity |
-| Nottingham University Hospitals | Healthcare |
-| Thomas Co | Commercial |
-| OutdoorLads | Community |
-| Vent-Axia | Manufacturing |
+### Security
+- Daily automated scans via GitLeaks
+- Dependabot security alerts auto-triage in Sentrix
+- Critical vulnerabilities → immediate patch, hotfix process
 
----
-
-## How We Work
-
-- **Security-first** — Automated scanning, Dependabot auto-merge for patches, manual review for majors
-- **Tested deployments** — Every update goes through staged environments with documented test plans
-- **Transparent communication** — GitHub issues, PR reviews, and clear documentation
-- **Sustainable pace** — We prioritise long-term stability over quick fixes
+### Deployments
+- Pantheon multidevs for all client work
+- PRs deploy to multidev automatically
+- Merge to main → deploys to dev environment
+- Production deployments via tagged releases or manual promotion
 
 ---
 
-## Get in Touch
+## Where to Find Things
 
-- **Website**: [adaptive.co.uk](https://adaptive.co.uk) — [repo](https://github.com/adaptive-web/adaptive-phoenix)
+| What | Where |
+|------|-------|
+| Client site repos | `adaptive-web/<client-name>` |
+| Shared scripts | [New-Deployment-Scripts](https://github.com/adaptive-web/New-Deployment-Scripts) |
+| PR templates | `.github/PULL_REQUEST_TEMPLATE/` |
+| Issue templates | `.github/ISSUE_TEMPLATE/` |
+| Workflow configs | `.github/workflows/` |
+
+---
+
+## Need Help?
+
+- **DevOps/Infra issues**: Slack `#devops` or create an issue here
+- **Client site problems**: Check the relevant client repo first
+- **Process questions**: Confluence or Slack `#engineering`
+
+---
+
+## External
+
+- **Website**: [adaptive.co.uk](https://adaptive.co.uk)
 - **Services**: Drupal development, managed hosting, DevOps consulting
-- **Issues**: Open an issue or start a discussion on any repo
 
 ---
 
