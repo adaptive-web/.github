@@ -56,7 +56,7 @@ We maintain long-term relationships with our clients. Some sites we've hosted an
 
 ## Get in Touch
 
-- **Website**: [adaptive.co.uk](https://adaptive.co.uk)
+- **Website**: [adaptive.co.uk](https://adaptive.co.uk) — [repo](https://github.com/adaptive-web/adaptive-phoenix)
 - **Services**: Drupal development, managed hosting, DevOps consulting
 - **Issues**: Open an issue or start a discussion on any repo
 
